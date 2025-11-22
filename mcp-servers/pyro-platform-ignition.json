@@ -1,0 +1,77 @@
+{
+  "name": "pyro-platform-ignition",
+  "version": "1.0.0",
+  "description": "MCP server for PYRO Fire Marshal platform specifications and integration requirements",
+  "repository": "https://github.com/Ununp3ntium115/PYRO_Platform_Ignition.git",
+  "server": {
+    "command": "node",
+    "args": ["/path/to/PYRO_Platform_Ignition/dist/index.js"],
+    "env": {
+      "NODE_ENV": "production"
+    }
+  },
+  "capabilities": {
+    "tools": true,
+    "resources": false,
+    "prompts": false
+  },
+  "tools": [
+    {
+      "name": "get_platform_specs",
+      "description": "Get PYRO Fire Marshal platform specifications (authentication, database, UI framework, services, security)",
+      "category": "platform"
+    },
+    {
+      "name": "get_api_schema",
+      "description": "Get PYRO API schema including endpoints, request/response formats, and service definitions",
+      "category": "platform"
+    },
+    {
+      "name": "get_integration_requirements",
+      "description": "Get integration requirements for PyRouterSploit (data integration, UI integration, authentication, configuration, monitoring)",
+      "category": "integration"
+    },
+    {
+      "name": "get_webhook_config",
+      "description": "Get webhook configuration including authentication, retry policy, and event types",
+      "category": "integration"
+    },
+    {
+      "name": "get_training_model_schema",
+      "description": "Get training model data schema including features and labels",
+      "category": "ml"
+    },
+    {
+      "name": "get_vulnerability_api_endpoints",
+      "description": "Get all PyRouterSploit vulnerability scanning API endpoints with details",
+      "category": "api"
+    },
+    {
+      "name": "get_ui_integration_options",
+      "description": "Get UI integration options (embedded, standalone, hybrid) with implementation details",
+      "category": "ui"
+    },
+    {
+      "name": "get_deployment_config",
+      "description": "Get deployment configuration requirements for PyRouterSploit in PYRO environment",
+      "category": "deployment"
+    }
+  ],
+  "installation": {
+    "steps": [
+      "1. Clone PYRO Platform Ignition repository",
+      "2. Run: cd PYRO_Platform_Ignition && npm install",
+      "3. Run: npm run build",
+      "4. Update 'args' path in this config to point to dist/index.js",
+      "5. Add to Claude Desktop config"
+    ]
+  },
+  "usage": {
+    "example_queries": [
+      "What authentication mechanism does PYRO use?",
+      "Show me the vulnerability scanning API endpoints",
+      "How should I integrate the UI with PYRO?",
+      "What's the training model data format?"
+    ]
+  }
+}

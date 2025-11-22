@@ -1,0 +1,19 @@
+{
+  "mcpServers": {
+    "pyroutersploit": {
+      "command": "/path/to/routersploit/rust/target/release/pyroutersploit",
+      "args": ["mcp", "--transport", "stdio"],
+      "env": {
+        "PYROUTERSPLOIT_DB_PATH": "/path/to/routersploit/data/pyroutersploit.redb",
+        "RUST_LOG": "info"
+      }
+    },
+    "pyro-platform-ignition": {
+      "command": "node",
+      "args": ["/path/to/PYRO_Platform_Ignition/dist/index.js"],
+      "env": {
+        "NODE_ENV": "production"
+      }
+    }
+  }
+}
