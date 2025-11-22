@@ -1,0 +1,55 @@
+{
+  "name": "pyroutersploit",
+  "version": "4.0.0",
+  "description": "MCP server for PyRouterSploit - Cross-platform security exploitation framework",
+  "server": {
+    "command": "./rust/target/release/pyroutersploit",
+    "args": ["mcp", "--transport", "stdio"],
+    "env": {
+      "PYROUTERSPLOIT_DB_PATH": "./data/pyroutersploit.redb",
+      "RUST_LOG": "info"
+    }
+  },
+  "capabilities": {
+    "tools": true,
+    "resources": false,
+    "prompts": false
+  },
+  "tools": [
+    {
+      "name": "cryptex_query",
+      "description": "Query the cryptex dictionary - maps function names to branding names with pseudo code",
+      "category": "dictionary"
+    },
+    {
+      "name": "cryptex_add",
+      "description": "Add new entry to cryptex dictionary",
+      "category": "dictionary"
+    },
+    {
+      "name": "list_exploits",
+      "description": "List all available security exploits",
+      "category": "exploits"
+    },
+    {
+      "name": "run_exploit",
+      "description": "Execute a security exploit against a target",
+      "category": "exploits"
+    },
+    {
+      "name": "scan_target",
+      "description": "Scan target for vulnerabilities",
+      "category": "scanning"
+    },
+    {
+      "name": "multi_hash",
+      "description": "Hash data with comprehensive algorithms (SHA-2/3, BLAKE, MD5, etc.)",
+      "category": "crypto"
+    },
+    {
+      "name": "qkd_encrypt",
+      "description": "Encrypt data using Quantum Key Distribution",
+      "category": "crypto"
+    }
+  ]
+}

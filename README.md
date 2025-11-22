@@ -1,7 +1,10 @@
-# RouterSploit - Exploitation Framework for Embedded Devices
+# PyRouterSploit 🚀
 
-[![Python 3.6](https://img.shields.io/badge/Python-3.6-yellow.svg)](http://www.python.org/download/)
-[![Build Status](https://travis-ci.org/threat9/routersploit.svg?branch=master)](https://travis-ci.org/threat9/routersploit)
+**Cross-Platform Security Exploitation Framework**
+
+[![Rust](https://img.shields.io/badge/Rust-1.75+-orange.svg)](https://www.rust-lang.org/)
+[![Python 3.9+](https://img.shields.io/badge/Python-3.9+-blue.svg)](http://www.python.org/download/)
+[![License: MIT](https://img.shields.io/badge/License-MIT-green.svg)](https://opensource.org/licenses/MIT)
 
 # Community
 Join community on [Embedded Exploitation Discord](https://discord.gg/UCXARN2vBx).
