@@ -9,7 +9,46 @@
 # Community
 Join community on [Embedded Exploitation Discord](https://discord.gg/UCXARN2vBx).
 
-# Description
+# PyRouterSploit - Next Generation
+
+PyRouterSploit is the evolution of RouterSploit, transformed into a cross-platform, framework-agnostic security testing platform with:
+
+🦀 **Rust Core** - High-performance, memory-safe foundation
+🗄️ **redb Database** - Embedded storage for exploits, scans, and cryptex dictionary
+🔐 **QKD Encryption** - Quantum Key Distribution with post-quantum cryptography
+🤖 **MCP Servers** - LLM-accessible programmatic interface
+🔄 **Node-RED Integration** - Visual workflow automation
+🎨 **Svelte UI** - Modern reactive web interface
+📚 **Cryptex Dictionary** - Function-to-branding name mapping system
+
+## Quick Start (PyRouterSploit v4.0)
+
+```bash
+# Build Rust core
+./scripts/build.sh
+
+# Query cryptex dictionary
+./rust/target/release/pyroutersploit cryptex --search dlink
+
+# Hash with all algorithms
+./rust/target/release/pyroutersploit hash --data "test" --all
+
+# QKD encryption
+./rust/target/release/pyroutersploit qkd encrypt --data "secret"
+
+# Start API server
+./rust/target/release/pyroutersploit serve
+
+# Start MCP server (for LLM integration)
+./rust/target/release/pyroutersploit mcp
+```
+
+📖 **Full Documentation**: [QUICKSTART.md](./QUICKSTART.md) | [ARCHITECTURE.md](./ARCHITECTURE.md)
+
+---
+
+# Legacy Python Version
+
 The RouterSploit Framework is an open-source exploitation framework dedicated to embedded devices.
 
 [![asciicast](https://asciinema.org/a/180370.png)](https://asciinema.org/a/180370)
@@ -35,9 +74,11 @@ Required:
 Optional:
 * bluepy - Bluetooth low energy 
 
-## Installation on Kali Linux
+## Installation on Kali Linux (Legacy Python)
 
-```
+**Note**: For the new Rust-based PyRouterSploit, see Quick Start above.
+
+```bash
 apt-get install python3-pip
 git clone https://www.github.com/threat9/routersploit
 cd routersploit
