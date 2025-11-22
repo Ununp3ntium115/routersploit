@@ -1,0 +1,53 @@
+{
+  "name": "pyro-platform",
+  "version": "1.0.0",
+  "description": "MCP server for PYRO Platform - Cross-platform integration hub",
+  "server": {
+    "command": "./rust/target/release/pyroutersploit",
+    "args": ["mcp", "--transport", "stdio"],
+    "env": {
+      "PYRO_PLATFORM_MODE": "true",
+      "PYROUTERSPLOIT_DB_PATH": "./data/pyro_platform.redb",
+      "RUST_LOG": "info"
+    }
+  },
+  "capabilities": {
+    "tools": true,
+    "resources": true,
+    "prompts": false
+  },
+  "tools": [
+    {
+      "name": "integrate_tool",
+      "description": "Integrate external security tool into PYRO platform",
+      "category": "integration"
+    },
+    {
+      "name": "run_workflow",
+      "description": "Execute a predefined security workflow",
+      "category": "workflow"
+    },
+    {
+      "name": "query_training_model",
+      "description": "Query trained ML models for vulnerability detection",
+      "category": "ml"
+    },
+    {
+      "name": "export_results",
+      "description": "Export scan/exploit results in various formats",
+      "category": "reporting"
+    }
+  ],
+  "resources": [
+    {
+      "uri": "pyro://exploits",
+      "name": "PyRouterSploit Exploits",
+      "description": "Access to RouterSploit exploit database"
+    },
+    {
+      "uri": "pyro://models",
+      "name": "Training Models",
+      "description": "ML models for vulnerability detection"
+    }
+  ]
+}

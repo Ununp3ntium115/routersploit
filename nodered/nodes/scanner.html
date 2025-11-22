@@ -1,0 +1,61 @@
+<script type="text/javascript">
+    RED.nodes.registerType('pyroutersploit-scanner', {
+        category: 'pyroutersploit',
+        color: '#a6bbcf',
+        defaults: {
+            name: {value: ""},
+            target: {value: ""},
+            scanType: {value: "autopwn"},
+            threads: {value: 10, validate: RED.validators.number()}
+        },
+        inputs: 1,
+        outputs: 1,
+        icon: "font-awesome/fa-search",
+        label: function() {
+            return this.name || "PyRouterSploit Scanner";
+        }
+    });
+</script>
+
+<script type="text/html" data-template-name="pyroutersploit-scanner">
+    <div class="form-row">
+        <label for="node-input-name"><i class="fa fa-tag"></i> Name</label>
+        <input type="text" id="node-input-name" placeholder="Scanner">
+    </div>
+    <div class="form-row">
+        <label for="node-input-target"><i class="fa fa-bullseye"></i> Target</label>
+        <input type="text" id="node-input-target" placeholder="192.168.1.1">
+    </div>
+    <div class="form-row">
+        <label for="node-input-scanType"><i class="fa fa-cogs"></i> Scan Type</label>
+        <select id="node-input-scanType">
+            <option value="autopwn">Auto PWN</option>
+            <option value="http">HTTP</option>
+            <option value="ssh">SSH</option>
+            <option value="telnet">Telnet</option>
+            <option value="all">All</option>
+        </select>
+    </div>
+    <div class="form-row">
+        <label for="node-input-threads"><i class="fa fa-tasks"></i> Threads</label>
+        <input type="number" id="node-input-threads" placeholder="10">
+    </div>
+</script>
+
+<script type="text/html" data-help-name="pyroutersploit-scanner">
+    <p>Scans a target for security vulnerabilities using PyRouterSploit.</p>
+    <h3>Inputs</h3>
+    <dl class="message-properties">
+        <dt>payload.target <span class="property-type">string</span></dt>
+        <dd>IP address or hostname to scan</dd>
+        <dt class="optional">payload.scanType <span class="property-type">string</span></dt>
+        <dd>Type of scan: autopwn, http, ssh, telnet, or all</dd>
+        <dt class="optional">payload.threads <span class="property-type">number</span></dt>
+        <dd>Number of concurrent threads</dd>
+    </dl>
+    <h3>Outputs</h3>
+    <dl class="message-properties">
+        <dt>payload <span class="property-type">object</span></dt>
+        <dd>Scan results including vulnerabilities found</dd>
+    </dl>
+</script>

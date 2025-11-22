@@ -1,0 +1,36 @@
+{
+  "name": "@pyroutersploit/node-red-contrib-pyroutersploit",
+  "version": "4.0.0",
+  "description": "Node-RED nodes for PyRouterSploit security testing framework",
+  "keywords": [
+    "node-red",
+    "pyroutersploit",
+    "security",
+    "pentesting",
+    "exploitation",
+    "qkd",
+    "cryptography"
+  ],
+  "author": "PyRouterSploit Team",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Ununp3ntium115/routersploit.git"
+  },
+  "node-red": {
+    "nodes": {
+      "scanner": "nodes/scanner.js",
+      "exploit": "nodes/exploit.js",
+      "cryptex": "nodes/cryptex.js",
+      "qkd-encrypt": "nodes/qkd-encrypt.js",
+      "multi-hash": "nodes/multi-hash.js",
+      "db-query": "nodes/db-query.js"
+    }
+  },
+  "dependencies": {
+    "axios": "^1.6.0"
+  },
+  "engines": {
+    "node": ">=18.0.0"
+  }
+}
