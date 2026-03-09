@@ -1,4 +1,4 @@
-FROM python:3.15-rc-slim-trixie
+FROM python:3.14.3-bookworm
 
 WORKDIR /routersploit
 
