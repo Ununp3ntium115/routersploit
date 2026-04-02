@@ -1,4 +1,4 @@
-requests==2.32.2
+requests==2.33.0
 paramiko
 pysnmp==4.4.6
 pycryptodome
@@ -8,3 +8,4 @@ pytest-xdist
 flake8
 git+git://github.com/threat9/threat9-test-bed
 pyasn1>=0.6.3 # not directly required, pinned by Snyk to avoid a vulnerability
+cryptography>=46.0.6 # not directly required, pinned by Snyk to avoid a vulnerability
